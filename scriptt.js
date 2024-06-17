@@ -76,9 +76,6 @@ greetingSpan.textContent = getGreeting();
 
 // End of About
 
-
-
 // Update the greeting message
 const greetingElement = document.getElementById("greeting");
 greetingElement.textContent = `${getGreeting()}, please fill out the form carefully.`;
-
