@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="stylee.css" />
     <link
       rel="shortcut icon"
-      href="./images/squareLogo.jpeg"
+      href="./images/circleLogo.png"
       type="image/x-icon"
     />
     <link
@@ -18,27 +18,46 @@
       src="https://kit.fontawesome.com/a39c29d29e.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      .hero-text {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+        z-index: 1;
+      }
+
+      .hero-text h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-text p {
+        font-size: 1.2rem;
+      }
+    </style>
   </head>
   <body>
     <header>
       <nav>
         <div class="logo">
-          <a href="" style="text-decoration: none">
-            <!-- <img src="tusu.jpeg" alt=""> -->
-            <h1>TUSU</h1>
+          <a href="">
+            <img src="./images/logo.png" alt="TUSU" />
           </a>
         </div>
         <ul class="nav-links">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Education</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-buttons">
-          <button class="resume-btn">Download Resume</button>
           <button class="theme-toggle" id="theme-toggle">
             <i class="fas fa-moon"></i>
           </button>
+          <button class="resume-btn">Download Resume</button>
         </div>
         <div class="hamburger">
           <i class="fas fa-bars"></i>
@@ -51,16 +70,20 @@
       <section class="home" id="home">
         <div class="slider">
           <div class="slide">
-            <img src="./images/slide1.jpg" alt="Slide 1" />
+            <img src="./images/background.png" alt="Slide 1" />
           </div>
-          <div class="slide">
-            <img src="./images/slide2.jpg" alt="Slide 2" />
-          </div>
-          <div class="slide">
-            <img src="./images/slide3.jpg" alt="Slide 3" />
+          <!-- More Slide will Be added later -->
+        </div>
+        <div class="hero-text">
+          <h2>Hey, I'm</h2>
+          <div class="TypeContiner">
+            <h1>
+              <span class="autoType"></span>
+            </h1>
           </div>
         </div>
       </section>
+
       <!-- End of Section -->
       <section class="about" id="about">
         <div class="about-container">
@@ -68,8 +91,8 @@
             <img src="./images/squareLogo.jpeg" alt="Profile Image" />
           </div>
           <div class="about-text">
-            <h2>Baisakhi Dutta</h2>
             <span id="greeting"></span>
+            <h1>I'm Baisakhi Dutta</h1>
             <p>
               I am a passionate web developer with expertise in HTML, CSS, and
               JavaScript. I strive to create modern and responsive websites that
@@ -77,15 +100,19 @@
             </p>
           </div>
           <div class="about-buttons">
-            <button class="resume-btn">Download Resume</button>
-            <button class="contact-btn">Contact Me</button>
-            <button class="collab-btn">Collaboration</button>
+            <button class="resume-btn resume2">Download Resume</button>
+            <button class="contact-btn">
+              <a href="#contact">Contact Me</a>
+            </button>
+            <button class="collab-btn">
+              <a href="#contact">Collaboration</a>
+            </button>
             <div class="social-links">
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
+              <a href=""><i class="fab fa-facebook"></i></a>
+              <a href=""><i class="fab fa-twitter"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-linkedin"></i></a>
+              <a href=""><i class="fab fa-github"></i></a>
             </div>
           </div>
         </div>
@@ -214,12 +241,12 @@
               <span>JavaScript</span>
               <p>
                 A web application that fetches and displays current weather
-                information based on the user's location or a specified city.
+                information based on the user's location or a city.
               </p>
               <a href="" target="_blank" class="project-link">View Project</a>
             </div>
             <div class="project-media">
-              <img src="./images/Weather-App.jpg" alt="Weather App" />
+              <img src="./images/Weather.jpg" alt="Weather App" />
             </div>
           </div>
         </div>
@@ -292,6 +319,7 @@
           <li><a href="#projects">My Projects</a></li>
           <li><a href="#contact">Contact Me</a></li>
         </ul>
+        <img src="./images/logo.png" style="height: 3.3rem" alt="Logo" />
       </div>
       <div class="visit-links">
         <h3>Useful Links</h3>
@@ -328,7 +356,7 @@
           </li>
 
           <li>
-            <a href="resume.html">
+            <a href="">
               <i class="fa-regular fa-circle-down"></i> Download Resume</a
             >
           </li>
@@ -349,10 +377,51 @@
       </div>
     </footer>
     <div class="sub-footer">
-      <span>Last updated: <span id="last-updated">17th June</span></span>
+      <span>Last updated: <span id="last-updated"></span></span>
     </div>
 
     <script src="scriptt.js"></script>
     <script src="formData.js"></script>
+    <script>
+      document
+        .querySelector(".resume-btn")
+        .addEventListener("click", function () {
+          const a = document.createElement("a");
+
+          a.href = "./docs/cv.pdf";
+          a.download = "Baisakhi-Dutta-Resume.pdf";
+
+          document.body.appendChild(a);
+
+          a.click();
+
+          document.body.removeChild(a);
+        });
+    </script>
+    <script>
+      document.querySelector(".resume2").addEventListener("click", function () {
+        const a = document.createElement("a");
+
+        a.href = "./docs/cv.pdf";
+        a.download = "Baisakhi-Dutta-Resume.pdf";
+
+        document.body.appendChild(a);
+
+        a.click();
+
+        document.body.removeChild(a);
+      });
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Script for TypeWritter Text -->
+    <script>
+      let typed = new Typed(".autoType", {
+        strings: ["Baisakhi Dutta", "Web Developer.", "YouTuber."],
+        typeSpeed: 100,
+        backSpeed: 50,
+        loop: true,
+      });
+    </script>
   </body>
 </html>

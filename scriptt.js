@@ -60,12 +60,14 @@ function getGreeting() {
   const hour = date.getHours();
   let greeting;
 
-  if (hour >= 5 && hour < 12) {
+  if (hour >= 0 && hour < 11) {
     greeting = "Good Morning";
-  } else if (hour >= 12 && hour < 18) {
+  } else if (hour >= 12 && hour < 17) {
     greeting = "Good Afternoon";
-  } else {
+  } else if (hour >= 17 && hour < 21) {
     greeting = "Good Evening";
+  } else {
+    greeting = "Hello";
   }
 
   return greeting;
@@ -75,7 +77,3 @@ const greetingSpan = document.getElementById("greeting");
 greetingSpan.textContent = getGreeting();
 
 // End of About
-
-// Update the greeting message
-const greetingElement = document.getElementById("greeting");
-greetingElement.textContent = `${getGreeting()}, please fill out the form carefully.`;

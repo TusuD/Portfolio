@@ -1,4 +1,10 @@
 /* General Styles */
+/* Noto Serif */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +12,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #fff;
   color: #333;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -17,18 +23,35 @@ body {
   color: #fff;
 }
 
+button a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  transition: color 0.3s ease;
+}
+
+button a:hover {
+  color: #fff;
+}
 /* Navbar Styles */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #f5f5f5;
+  background-color: #000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo img {
   height: 3rem;
+  width: 8rem;
 }
 
 .nav-links {
@@ -37,17 +60,20 @@ nav {
 }
 
 .nav-links li {
-  margin-right: 1.5rem;
+  margin-right: 1.4rem;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #ddd;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #666;
+  color: #fff;
 }
 
 .nav-buttons {
@@ -63,24 +89,30 @@ nav {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
   transition: background-color 0.3s ease;
 }
 
 .resume-btn:hover {
   background-color: #555;
+  font-weight: 500;
 }
 
 .theme-toggle {
   background-color: transparent;
-  color: #333;
+  color: #ccc;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   cursor: pointer;
+  margin-right: 1rem;
   transition: color 0.3s ease;
 }
 
 .theme-toggle:hover {
-  color: #666;
+  color: #fff;
+  font-size: 1.8rem;
 }
 
 .hamburger {
@@ -89,7 +121,9 @@ nav {
 }
 
 .hamburger i {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  color: #fff;
+  padding-bottom: 0.01rem;
 }
 
 /* Main Contents */
@@ -110,7 +144,6 @@ nav {
 
 .slide {
   position: absolute;
-  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -253,8 +286,8 @@ nav {
   opacity: 0;
   transition: opacity 0.3s ease;
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.8); /* Light theme background */
-  color: #333; /* Light theme text color */
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
   border-radius: 8px;
 }
 
@@ -277,8 +310,8 @@ nav {
 
 /* Dark theme styles */
 body.dark-mode .card-text {
-  background-color: rgba(0, 0, 0, 0.8); /* Dark theme background */
-  color: #fff; /* Dark theme text color */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
@@ -614,10 +647,30 @@ footer {
   .visit-links,
   .map {
     max-width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
-
   .show {
     display: flex;
+  }
+}
+
+/* All Media */
+
+@media screen and (max-width: 660px) {
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+  }
+  .hero-text h2 {
+    margin-top: 10rem;
+    font-size: 1rem;
+  }
+  .hero-text .TypeContiner h1 span {
+    font-size: 2rem;
   }
 }
