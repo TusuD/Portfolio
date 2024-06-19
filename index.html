@@ -19,6 +19,9 @@
       crossorigin="anonymous"
     ></script>
     <style>
+      .about-container {
+        margin-top: 50px;
+      }
       .hero-text {
         position: absolute;
         top: 25%;
@@ -32,10 +35,6 @@
       .hero-text h1 {
         font-size: 3rem;
         margin-bottom: 1rem;
-      }
-
-      .hero-text p {
-        font-size: 1.2rem;
       }
     </style>
   </head>
@@ -54,9 +53,11 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-buttons">
-          <button class="theme-toggle" id="theme-toggle">
+          <!-- <button class="theme-toggle" id="theme-toggle">
             <i class="fas fa-moon"></i>
-          </button>
+          </button> -->
+          <button class="theme-toggle"><i class="fab fa-linkedin"></i></button>
+          <button class="theme-toggle"><i class="fab fa-github"></i></button>
           <button class="resume-btn">Download Resume</button>
         </div>
         <div class="hamburger">
@@ -102,17 +103,33 @@
           <div class="about-buttons">
             <button class="resume-btn resume2">Download Resume</button>
             <button class="contact-btn">
-              <a href="#contact">Contact Me</a>
+              <a href="#contact">
+                <i class="fa-solid fa-phone"></i> Contact Me</a
+              >
             </button>
             <button class="collab-btn">
-              <a href="#contact">Collaboration</a>
+              <a href="#contact">
+                <i class="fa-solid fa-users"></i> Collaboration</a
+              >
             </button>
             <div class="social-links">
-              <a href=""><i class="fab fa-facebook"></i></a>
-              <a href=""><i class="fab fa-twitter"></i></a>
-              <a href=""><i class="fab fa-instagram"></i></a>
-              <a href=""><i class="fab fa-linkedin"></i></a>
-              <a href=""><i class="fab fa-github"></i></a>
+              <a target="_blank" href="mailto:tusucreationd@gmail.com"
+                ><i class="fa-regular fa-envelope"></i
+              ></a>
+              <a target="_blank" href="https://www.instagram.com/baisakhi0001/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a target="_blank" href="https://www.linkedin.com/in/tusu/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a target="_blank" href="https://github.com/TusuD/"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                target="_blank"
+                href="https://www.youtube.com/@tusucreationd3067"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -260,7 +277,6 @@
           </div>
           <div class="contact-form">
             <h2>Contact with TUSU</h2>
-            <p id="greeting"></p>
             <p>Please fill out the form carefully.</p>
             <form name="submit-to-google-sheet">
               <div class="form-group">
@@ -306,23 +322,25 @@
           </div>
         </div>
       </section>
-      <!-- End o fthe Section -->
+      <!-- End of the Section -->
     </main>
 
     <footer>
       <div class="useful-links">
-        <h3>Navigation Links</h3>
+        <h3 style="text-align: center">Navigation Links</h3>
         <ul>
           <li><a href="#home">Return Home</a></li>
           <li><a href="#about">About Me</a></li>
           <li><a href="#education">My Education</a></li>
           <li><a href="#projects">My Projects</a></li>
           <li><a href="#contact">Contact Me</a></li>
+          <li>
+            <a href="#about"> Download Resume</a>
+          </li>
         </ul>
-        <img src="./images/logo.png" style="height: 3.3rem" alt="Logo" />
       </div>
       <div class="visit-links">
-        <h3>Useful Links</h3>
+        <h3 style="text-align: center">Useful Links</h3>
         <ul>
           <li>
             <a target="_blank" href="https://www.linkedin.com/in/tusu/">
@@ -340,31 +358,29 @@
             </a>
           </li>
           <li>
-            <a href="mailto:baisakhidutta7515@gmail.com">
-              <i class="fa-regular fa-envelope"></i> Send an Email</a
-            >
-          </li>
-          <li>
-            <a href="tel:+91 9073532270">
-              <i class="fa-solid fa-phone"></i> Call for Buisness</a
-            >
-          </li>
-          <li>
-            <a href="https://wa.me/9073532270">
-              <i class="fab fa-whatsapp"> </i> Message on Whatsapp</a
+            <a target="_blank" href="mailto:tusucreationd@gmail.com">
+              <i class="fa-regular fa-envelope"></i> Email</a
             >
           </li>
 
           <li>
-            <a href="">
-              <i class="fa-regular fa-circle-down"></i> Download Resume</a
+            <a href="https://wa.me/9073532270">
+              <i class="fab fa-whatsapp"> </i> Whatsapp</a
+            >
+          </li>
+
+          <li>
+            <a
+              target="_blank"
+              href="https://www.youtube.com/@tusucreationd3067"
+            >
+              <i class="fa-brands fa-youtube"> </i> Youtube</a
             >
           </li>
         </ul>
       </div>
       <div class="map">
         <h3 style="text-align: center">Home Location</h3>
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.9630238428525!2d-73.99368958459593!3d40.69865717933111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a47df06b185%3A0xc889234bc07c42ee!2sBrooklyn%20Bridge%20Park!5e0!3m2!1sen!2sus!4v1685713906563!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d923.2096173392613!2d87.78668106949223!3d22.246206740013665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02bf47ecbd7c7d%3A0xc0a2f62892070be4!2z4Kas4KeI4Ka24Ka-4KaW4KeAIOCmq-CngeCmsiDgpq3gpr7gpqjgp43gpqHgpr7gprA!5e0!3m2!1sen!2sin!4v1718627209247!5m2!1sen!2sin"
           width="400"
@@ -412,13 +428,14 @@
         document.body.removeChild(a);
       });
     </script>
+    <!-- Type Writter CDN -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <!-- Script for TypeWritter Text -->
     <script>
       let typed = new Typed(".autoType", {
         strings: ["Baisakhi Dutta", "Web Developer.", "YouTuber."],
-        typeSpeed: 100,
+        typeSpeed: 60,
         backSpeed: 50,
         loop: true,
       });

@@ -1,21 +1,3 @@
-// Theme Toggle
-const themeToggle = document.getElementById("theme-toggle");
-const body = document.body;
-
-themeToggle.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-  const isDarkMode = body.classList.contains("dark-mode");
-  const icon = themeToggle.querySelector("i");
-
-  if (isDarkMode) {
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
-  } else {
-    icon.classList.remove("fa-sun");
-    icon.classList.add("fa-moon");
-  }
-});
-
 // Responsive Navbar
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
